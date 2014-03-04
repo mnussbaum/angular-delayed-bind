@@ -1,0 +1,26 @@
+{
+  "name": "angular_delayed_bind",
+  "version": "0.0.1",
+  "authors": [
+    "mnussbaum <michaelnussbaum08@gmail.com>"
+  ],
+  "description": "Data binding with a time delay",
+  "main": "src/delayed_bind.js",
+  "keywords": [
+    "delay",
+    "delayed"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test"
+  ],
+  "dependencies": {
+    "angular": "~1.2.13"
+  },
+  "devDependencies": {
+    "angular-mocks": "1.2.13"
+  }
+}
