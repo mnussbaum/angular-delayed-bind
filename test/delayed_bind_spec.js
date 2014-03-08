@@ -14,7 +14,7 @@ describe("delayedBind", function() {
     $timeout = _$timeout_;
   }));
 
-  it("sets the evaled, passed in value as the text of the element", function() {
+  it("evals the passed in string in the current scope, sets element text to the result", function() {
       scope.woo = "test";
       compiled = $compile("<div delayed-bind='woo'></div>");
       element = compiled(scope);
@@ -25,7 +25,7 @@ describe("delayedBind", function() {
 
   it("updates the value after a timeout", function() {
       scope.woo = "test";
-      compiled = $compile("<div delayed-bind='woo'></div>");
+      compiled = $compile("<div delayed-bind='woo' delay='3000'></div>");
       element = compiled(scope);
       scope.$digest();
       scope.woo = "fubar";

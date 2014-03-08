@@ -13,7 +13,10 @@ angular.module("delayed-bind", []).
               if(newValue === oldValue) {
                 scope.delayedBind = newValue;
               } else {
-                $timeout(function() { scope.delayedBind = newValue; }, 1000);
+                $timeout(
+                  function() { scope.delayedBind = newValue; },
+                  scope.$eval(attr.delay) || 1000
+                );
               }
             }
           );
